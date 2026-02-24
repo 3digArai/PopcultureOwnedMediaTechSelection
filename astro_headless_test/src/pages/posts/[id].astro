@@ -1,0 +1,48 @@
+---
+import "../../styles/site.css";
+import { getPost, getPosts } from "../../lib/wp";
+
+export async function getStaticPaths() {
+  try {
+    const posts = await getPosts();
+    return posts.map((post) => ({
+      params: { id: String(post.id) },
+    }));
+  } catch {
+    return [];
+  }
+}
+
+const { id } = Astro.params;
+if (!id) {
+  throw new Error("Post id is required");
+}
+
+const post = await getPost(id);
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title set:html={post.title.rendered} />
+  </head>
+  <body>
+    <div class="page">
+      <main class="main">
+        <p class="badge">Post Detail</p>
+        <h1 set:html={post.title.rendered} />
+        <p class="meta">
+          {post.date ? new Date(post.date).toLocaleDateString("ja-JP") : "date unknown"}
+        </p>
+
+        <article class="post-content" set:html={post.content.rendered} />
+
+        <p>
+          <a class="link" href="/">一覧へ戻る</a>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

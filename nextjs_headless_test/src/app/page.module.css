@@ -1,0 +1,199 @@
+.page {
+  min-height: 100vh;
+  background: #f4efe7;
+}
+
+.main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-block;
+  background: #181818;
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.header h1 {
+  margin: 12px 0 8px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.lead {
+  color: #4d4d4d;
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: #fffdf8;
+  border: 1px solid #e7dece;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.meta {
+  color: #6a645b;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.excerpt :global(p) {
+  margin-bottom: 8px;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #b53a2c;
+  font-weight: 600;
+}
+
+.note {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #6a645b;
+}
+
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 26px;
+  }
+}
+.postContent {
+  margin: 16px 0 24px;
+  line-height: 1.85;
+}
+
+.postContent :global(p) {
+  margin: 0 0 12px;
+}
+
+.postContent :global(h2),
+.postContent :global(h3) {
+  margin: 18px 0 10px;
+}
+
+.postContent :global(h2) {
+  font-size: 26px;
+}
+
+.postContent :global(h3) {
+  font-size: 20px;
+}
+
+.postContent :global(img) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.postContent :global(ul),
+.postContent :global(ol) {
+  margin: 0 0 14px 22px;
+}
+
+.postContent :global(li) {
+  margin-bottom: 6px;
+}
+
+.postContent :global(hr) {
+  border: 0;
+  border-top: 1px solid #e7dece;
+  margin: 18px 0;
+}
+
+.postContent :global(blockquote) {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-left: 4px solid #222;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.postContent :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 16px;
+}
+
+.postContent :global(th),
+.postContent :global(td) {
+  border-bottom: 1px solid #e7dece;
+  padding: 8px;
+  text-align: left;
+}
+
+.postContent :global(details) {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px solid #e7dece;
+  background: #faf9f5;
+  border-radius: 8px;
+}
+
+.postContent :global(summary) {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.postContent :global(iframe) {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.postContent :global(a) {
+  color: #b53a2c;
+}
+
+/* Gutenberg columns block */
+.postContent :global(.wp-block-columns) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+  margin: 12px 0 16px;
+}
+
+.postContent :global(.wp-block-column) {
+  min-width: 0;
+}
+
+/* Gutenberg details block (FAQ) */
+.postContent :global(.wp-block-details) {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px solid #e7dece;
+  background: #faf9f5;
+  border-radius: 8px;
+}
+
+.postContent :global(.wp-block-details summary) {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .postContent :global(.wp-block-columns) {
+    grid-template-columns: 1fr;
+  }
+}

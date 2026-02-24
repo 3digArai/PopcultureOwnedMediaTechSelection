@@ -1,0 +1,66 @@
+---
+import "../styles/site.css";
+import { getApiBaseForDisplay, getPosts, type WpPostSummary } from "../lib/wp";
+
+let posts: WpPostSummary[] = [];
+let errorMessage = "";
+
+try {
+  posts = await getPosts();
+} catch (error) {
+  errorMessage = error instanceof Error ? error.message : "Unknown error";
+}
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>WordPress Posts in Astro</title>
+  </head>
+  <body>
+    <div class="page">
+      <main class="main">
+        <header class="header">
+          <p class="badge">Headless Test</p>
+          <h1>WordPress Posts in Astro</h1>
+          <p class="lead">
+            WordPressの投稿を <code>/wp-json/wp/v2/posts</code> から取得して表示します。
+          </p>
+        </header>
+
+        {
+          errorMessage ? (
+            <p>投稿取得エラー: {errorMessage}</p>
+          ) : (
+            <section class="list">
+              {posts.map((post) => (
+                <article class="card">
+                  <h2 set:html={post.title.rendered} />
+                  <p class="meta">
+                    {post.date
+                      ? new Date(post.date).toLocaleDateString("ja-JP")
+                      : "date unknown"}
+                  </p>
+                  <div class="excerpt" set:html={post.excerpt.rendered} />
+                  <a class="link" href={`/posts/${post.id}`}>
+                    詳細を見る
+                  </a>
+                </article>
+              ))}
+            </section>
+          )
+        }
+
+        <div class="note">
+          <p>
+            API Base: <code>{getApiBaseForDisplay()}</code>
+          </p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
