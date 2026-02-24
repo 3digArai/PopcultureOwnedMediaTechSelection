@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordPress Posts in HTML/CSS/TS</title>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <p class="badge">Headless Test</p>
+        <h1>WordPress Posts in HTML/CSS/TS</h1>
+        <p class="lead">WordPressの投稿をREST APIで取得して表示します。</p>
+      </header>
+      <section id="post-list" class="list"></section>
+      <p id="error-message" class="error" hidden></p>
+      <div class="note">
+        <p>API Base: <code id="api-base"></code></p>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

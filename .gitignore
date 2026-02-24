@@ -1,0 +1,6 @@
+# Ignore local nested repos
+astro_headless_test/.git/
+nextjs_headless_test/.git/
+
+# Ignore hands-on notes for now
+document/handsonnote/

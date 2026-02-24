@@ -1,0 +1,71 @@
+﻿/*
+Theme Name: PC Minimal Theme
+Theme URI: https://example.com/
+Author: Popculture Owned Media Team
+Author URI: https://example.com/
+Description: Minimal theme for local WordPress design experiments.
+Version: 0.1.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 8.1
+Text Domain: pc-minimal-theme
+*/
+
+:root {
+  --bg: #f6f1e8;
+  --text: #1f1f1f;
+  --accent: #c0392b;
+  --card: #fffaf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #fff8e1, var(--bg));
+}
+
+.site-header,
+.site-footer {
+  padding: 20px;
+  background: #111;
+  color: #fff;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.post-card {
+  background: var(--card);
+  border: 1px solid #e7dfd0;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 0 0 16px;
+}
+
+.post-card h2 {
+  margin: 0 0 10px;
+}
+
+.post-card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-meta {
+  font-size: 12px;
+  opacity: 0.75;
+}
