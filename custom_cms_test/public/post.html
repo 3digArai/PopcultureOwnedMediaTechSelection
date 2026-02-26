@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>記事詳細 | Custom CMS</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <p><a href="/">一覧へ戻る</a></p>
+      <article id="post" class="panel"></article>
+      <p id="message" class="muted"></p>
+    </main>
+    <script type="module">
+      const params = new URLSearchParams(location.search);
+      const slug = params.get("slug");
+      const postEl = document.getElementById("post");
+      const msg = document.getElementById("message");
+      if (!slug) {
+        msg.textContent = "slugが指定されていません。";
+      } else {
+        const res = await fetch(`/api/posts/${encodeURIComponent(slug)}`);
+        if (!res.ok) {
+          msg.textContent = "記事が見つかりません。";
+        } else {
+          const post = await res.json();
+          postEl.innerHTML = `
+            <h1>${post.title}</h1>
+            <p class="meta">公開日: ${post.publishedAt ? new Date(post.publishedAt).toLocaleString("ja-JP") : "-"}</p>
+            <div>${post.body}</div>
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>

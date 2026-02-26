@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: #d6d9dc;
+  color: #333;
+}
+
+a {
+  color: #1a5ca8;
+  text-decoration: none;
+}
+
+.inner {
+  width: min(1000px, 95vw);
+  margin: 0 auto;
+}
+
+.topbar {
+  background: #2e3337;
+  color: #fff;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 52px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.global-nav {
+  display: flex;
+  gap: 14px;
+  font-size: 13px;
+  flex: 1;
+}
+
+.global-nav a {
+  color: #d8dee6;
+}
+
+.search {
+  border: 0;
+  background: #4c97d9;
+  color: #fff;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.subnav {
+  background: #f0f4f8;
+  border-bottom: 1px solid #c8d2dd;
+}
+
+.subnav-inner {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.page {
+  background: #fff;
+  margin-top: 14px;
+  padding: 14px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid #d8dee6;
+  background: #fff;
+  padding: 8px;
+}
+
+.thumb {
+  background: linear-gradient(135deg, #cfd8e1, #b5c2cf);
+  border-radius: 4px;
+  height: 70px;
+}
+
+.thumb.large {
+  height: 210px;
+  margin-bottom: 8px;
+}
+
+.thumb.sm {
+  width: 84px;
+  min-width: 84px;
+  height: 56px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.feed h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf1f5;
+  font-size: 13px;
+}
+
+.news-list p {
+  margin: 4px 0 0;
+  color: #6a6a6a;
+}
+
+.sidebar {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.sidebox {
+  border: 1px solid #d8dee6;
+  padding: 8px;
+  background: #fafcfe;
+}
+
+.sidebox h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.sidebox ul,
+.sidebox ol {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+}
+
+.sidebox li {
+  margin-bottom: 6px;
+}
+
+.footer {
+  margin-top: 20px;
+  background: #2e3337;
+  color: #c6d0db;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  font-size: 12px;
+}
+
+.footer a {
+  color: #c6d0db;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .content {
+    grid-template-columns: 1fr;
+  }
+}

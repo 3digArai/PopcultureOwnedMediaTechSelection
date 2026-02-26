@@ -1,0 +1,35 @@
+[
+  {
+    "id": "sample-1",
+    "slug": "custom-cms-sample-post",
+    "title": "【検証用】自作CMSサンプル投稿",
+    "excerpt": "自作CMSで作成・公開したサンプル投稿です。",
+    "body": "<p>この投稿は自作CMSの検証用です。</p><h2>確認ポイント</h2><ul><li>管理画面から投稿を作れる</li><li>下書き/公開を切り替えられる</li><li>公開記事だけ一覧に出る</li></ul>",
+    "status": "published",
+    "createdAt": "2026-02-24T00:00:00.000Z",
+    "updatedAt": "2026-02-24T00:00:00.000Z",
+    "publishedAt": "2026-02-24T00:00:00.000Z"
+  },
+  {
+    "id": "6486a9dc",
+    "slug": "ps-test-post",
+    "title": "ps test post",
+    "excerpt": "x",
+    "body": "<p>body</p>",
+    "status": "draft",
+    "createdAt": "2026-02-24T06:51:36.303Z",
+    "updatedAt": "2026-02-24T06:51:36.303Z",
+    "publishedAt": null
+  },
+  {
+    "id": "af48c684",
+    "slug": "faq",
+    "title": "【検証用】ブロック表現テスト（見出し・画像・表・FAQ）",
+    "excerpt": "見出し、画像、箇条書き、引用、表、FAQトグルを1記事で確認するためのテスト投稿です。",
+    "body": "<p>この投稿は、本文の表現力とフロント表示確認のためのテストです。</p>\n\n<h2>1. リード文と画像</h2>\n<p>固定URLの画像を使って、毎回同じ見え方になるようにしています。</p>\n<p><img src=\"https://picsum.photos/id/237/1200/700\" alt=\"テスト画像（犬）\" /></p>\n\n<h2>2. 箇条書き（ul / ol）</h2>\n<h3>チェックポイント</h3>\n<ul>\n  <li>見出し階層が意図どおりか</li>\n  <li>余白と行間が読みやすいか</li>\n  <li>リンク色がブランドトーンに合うか</li>\n</ul>\n\n<h3>公開までの流れ</h3>\n<ol>\n  <li>下書き作成</li>\n  <li>レビュー確認</li>\n  <li>公開</li>\n</ol>\n\n<hr />\n\n<h2>3. 引用・リンク</h2>\n<blockquote>\n  読みやすさは、装飾よりも情報の順序で決まる。\n</blockquote>\n<p>\n  参考リンク:\n  <a href=\"https://microcms.io/\" target=\"_blank\" rel=\"noopener noreferrer\">microCMS公式サイト</a>\n</p>\n\n<h2>4. 比較テーブル</h2>\n<table>\n  <thead>\n    <tr>\n      <th>観点</th>\n      <th>確認内容</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>表示速度</td>\n      <td>初回表示・遷移時の体感</td>\n    </tr>\n    <tr>\n      <td>編集性</td>\n      <td>非エンジニアが更新しやすいか</td>\n    </tr>\n    <tr>\n      <td>運用性</td>\n      <td>承認・公開フローを作りやすいか</td>\n    </tr>\n  </tbody>\n</table>\n\n<h2>5. FAQ風トグル</h2>\n<details>\n  <summary>Q. Headlessにすると何が変わる？</summary>\n  <p>A. CMSは編集専用、表示は別フロントで作る構成になります。</p>\n</details>\n<details>\n  <summary>Q. まず見るべき比較観点は？</summary>\n  <p>A. 初期工数より、運用工数・引き継ぎやすさを先に見るのが実務的です。</p>\n</details>",
+    "status": "published",
+    "createdAt": "2026-02-24T06:53:19.412Z",
+    "updatedAt": "2026-02-24T06:53:19.412Z",
+    "publishedAt": "2026-02-24T06:53:19.412Z"
+  }
+]

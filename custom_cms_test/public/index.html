@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom CMS Test</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <p class="badge">Custom CMS</p>
+      <h1>自作CMS 公開記事一覧</h1>
+      <p class="lead">公開ステータスの投稿だけ表示します。</p>
+      <p><a href="/admin">管理画面へ</a></p>
+      <section id="post-list" class="list"></section>
+      <p id="message" class="muted"></p>
+    </main>
+    <script type="module">
+      const list = document.getElementById("post-list");
+      const msg = document.getElementById("message");
+      const res = await fetch("/api/posts");
+      const posts = await res.json();
+      if (!posts.length) {
+        msg.textContent = "公開記事はまだありません。";
+      }
+      list.innerHTML = posts
+        .map(
+          (p) => `
+          <article class="card">
+            <h2>${p.title}</h2>
+            <p class="meta">slug: ${p.slug} / updated: ${new Date(p.updatedAt).toLocaleString("ja-JP")}</p>
+            <p>${p.excerpt ?? ""}</p>
+            <a href="/post.html?slug=${encodeURIComponent(p.slug)}">詳細を見る</a>
+          </article>
+        `
+        )
+        .join("");
+    </script>
+  </body>
+</html>
