@@ -9,78 +9,169 @@
   <body>
     <header class="topbar">
       <div class="inner topbar-inner">
-        <div class="logo">ナタリー風モック</div>
         <nav class="global-nav">
-          <a href="#">ホーム</a>
-          <a href="#">ニュース</a>
-          <a href="#">特集</a>
-          <a href="#">ランキング</a>
+          <a class="active" href="#">ホーム</a>
+          <a href="#">音楽</a>
+          <a href="#">コミック</a>
+          <a href="#">お笑い</a>
+          <a href="#">映画</a>
+          <a href="#">ステージ</a>
+          <a href="#">ストア</a>
+          <a href="#">ライブ</a>
         </nav>
-        <button class="search">検索</button>
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="検索" />
+        </div>
       </div>
     </header>
 
-    <div class="subnav">
-      <div class="inner subnav-inner">
-        <a href="#">音楽</a>
-        <a href="#">ライブ</a>
-        <a href="#">インタビュー</a>
-        <a href="#">コラム</a>
+    <div class="brandbar">
+      <div class="inner brandbar-inner">
+        <div class="brand">
+          <div class="brand-logo">POPPOINT</div>
+          <p>ポップカルチャーのニュースサイト</p>
+        </div>
+        <button class="login-btn">ログイン</button>
       </div>
     </div>
 
     <main class="inner page">
-      <section class="hero">
-        <article class="hero-main card">
-          <div class="thumb large"></div>
-          <h1>メイン特集タイトルがここに入る</h1>
-          <p>画像を元にしたAIコーディング再現のデモページです。</p>
-        </article>
-        <div class="hero-grid">
-          <article class="card"><div class="thumb"></div><p>注目記事タイトル</p></article>
-          <article class="card"><div class="thumb"></div><p>注目記事タイトル</p></article>
-          <article class="card"><div class="thumb"></div><p>注目記事タイトル</p></article>
-          <article class="card"><div class="thumb"></div><p>注目記事タイトル</p></article>
-        </div>
+      <section class="editorial-strip">
+        <div id="editorial-list" class="editorial-list"></div>
       </section>
 
       <div class="content">
         <section class="feed">
-          <h2>最新ニュース</h2>
+          <h2>最新ニュース <span>›</span></h2>
           <ul class="news-list">
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（1）</a><p>要約テキストが入ります。</p></div></li>
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（2）</a><p>要約テキストが入ります。</p></div></li>
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（3）</a><p>要約テキストが入ります。</p></div></li>
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（4）</a><p>要約テキストが入ります。</p></div></li>
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（5）</a><p>要約テキストが入ります。</p></div></li>
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（6）</a><p>要約テキストが入ります。</p></div></li>
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（7）</a><p>要約テキストが入ります。</p></div></li>
-            <li><div class="thumb sm"></div><div><a href="#">ニュースタイトルが入ります（8）</a><p>要約テキストが入ります。</p></div></li>
+            <li>
+              <div class="news-thumb"></div>
+              <div class="news-body">
+                <p class="news-topic">ジョジョ</p>
+                <a href="#" class="news-title">「ジョジョの奇妙な冒険」のフレーム切手セット、石仮面をアートに落とし込んだグッズ</a>
+                <p class="news-summary">荒木飛呂彦原作によるTVアニメ「ジョジョの奇妙な冒険 ファントムブラッド」関連企画が公開。</p>
+                <p class="news-meta">15:45　<span>コミック</span></p>
+              </div>
+            </li>
+            <li>
+              <div class="news-thumb"></div>
+              <div class="news-body">
+                <p class="news-topic">1巻</p>
+                <a href="#" class="news-title">猟奇殺人に挑む女子高生を描く「ヴェクサシオン」の続編「Fの継承者と心眼少女」1巻</a>
+                <p class="news-summary">湯川義弘「ヴェクサシオン Fの継承者と心眼少女」1巻が、本日発売。</p>
+                <p class="news-meta">15:39　<span>コミック</span></p>
+              </div>
+            </li>
+            <li>
+              <div class="news-thumb"></div>
+              <div class="news-body">
+                <p class="news-topic">コメントあり / アニソン</p>
+                <a href="#" class="news-title">レトロリロンがアニメ「ラス為」第2期OPテーマ担当、EDテーマはガラクタ</a>
+                <p class="news-summary">4月7日よりTOKYO MX、MBS、BS11にて順次放送されるテレビアニメ「悲劇の元凶となる最強外道ラスボス女王は民のために尽くします。」。</p>
+                <p class="news-meta">15:36　<span>音楽</span></p>
+              </div>
+            </li>
           </ul>
+          <a class="more-btn feed-more-btn" href="#">もっと見る</a>
         </section>
 
         <aside class="sidebar">
-          <section class="sidebox">
-            <h3>アクセスランキング</h3>
-            <ol>
-              <li><a href="#">ランキング項目 1</a></li>
-              <li><a href="#">ランキング項目 2</a></li>
-              <li><a href="#">ランキング項目 3</a></li>
-              <li><a href="#">ランキング項目 4</a></li>
-            </ol>
-          </section>
-          <section class="sidebox">
-            <h3>カテゴリ</h3>
-            <ul>
-              <li><a href="#">J-POP</a></li>
-              <li><a href="#">ROCK</a></li>
-              <li><a href="#">アニソン</a></li>
-              <li><a href="#">ライブレポ</a></li>
+          <section class="sidebox product-box">
+            <h3 class="product-title">POPPPOINTストアのオススメ商品 <span>›</span></h3>
+            <ul class="product-list">
+              <li><div class="product-thumb"></div><a href="#">K2</a></li>
+              <li><div class="product-thumb"></div><a href="#">SAKAMOTO DAYS</a></li>
+              <li><div class="product-thumb"></div><a href="#">カスタム君</a></li>
+              <li><div class="product-thumb"></div><a href="#">弱虫ペダル</a></li>
+              <li><div class="product-thumb"></div><a href="#">吾妻光良 &amp; The Swinging Boppers</a></li>
             </ul>
+            <a class="store-btn" href="#">POPPPOINTストアへ</a>
           </section>
-          <section class="sidebox">
-            <h3>ピックアップ</h3>
-            <p>外部リンク紹介カードをここに配置する想定。</p>
+          <section class="sidebox music-box">
+            <h3>音楽記事 アクセスランキング</h3>
+            <ol class="music-list">
+              <li>
+                <span class="rank-badge">1</span>
+                <div class="music-item">
+                  <a href="#">京本大我主演ドラマのKV公開</a>
+                  <p>★ 1719　7:00</p>
+                </div>
+              </li>
+              <li>
+                <span class="rank-badge">2</span>
+                <div class="music-item">
+                  <a href="#">RIP SLYME“5人の旅行”でSU身近</a>
+                  <p>★ 446　2月25日</p>
+                </div>
+              </li>
+              <li>
+                <span class="rank-badge">3</span>
+                <div class="music-item">
+                  <a href="#">「DayDay. SUPER LIVE」今年も開催</a>
+                  <p>★ 180　10:00</p>
+                </div>
+              </li>
+              <li>
+                <span class="rank-badge">4</span>
+                <div class="music-item">
+                  <a href="#">桑田佳祐70歳はむしろ「ここから」が始まり</a>
+                  <p>★ 1868　4:00</p>
+                </div>
+              </li>
+              <li>
+                <span class="rank-badge">5</span>
+                <div class="music-item">
+                  <a href="#">超特急リョウガ＆アロハが「ラヴィット！」に</a>
+                  <p>★ 3273　10:32</p>
+                </div>
+              </li>
+            </ol>
+            <a class="more-btn" href="#">もっと見る</a>
+          </section>
+          <section class="sidebox category-box comic-box">
+            <h3>コミック - 記事アクセスランキング</h3>
+            <ol class="category-list">
+              <li><span class="rank-badge">1</span><div class="category-item"><a href="#">注目コミック特集が公開</a><p>★ 1512　9:20</p></div></li>
+              <li><span class="rank-badge">2</span><div class="category-item"><a href="#">人気作の新章レビュー</a><p>★ 980　8:45</p></div></li>
+              <li><span class="rank-badge">3</span><div class="category-item"><a href="#">作家インタビュー完全版</a><p>★ 742　7:12</p></div></li>
+              <li><span class="rank-badge">4</span><div class="category-item"><a href="#">話題の連載まとめ</a><p>★ 621　6:03</p></div></li>
+              <li><span class="rank-badge">5</span><div class="category-item"><a href="#">編集部おすすめ5選</a><p>★ 511　5:30</p></div></li>
+            </ol>
+            <a class="more-btn" href="#">もっと見る</a>
+          </section>
+          <section class="sidebox category-box comedy-box">
+            <h3>お笑い - 記事アクセスランキング</h3>
+            <ol class="category-list">
+              <li><span class="rank-badge">1</span><div class="category-item"><a href="#">新番組の見どころ解説</a><p>★ 1822　11:05</p></div></li>
+              <li><span class="rank-badge">2</span><div class="category-item"><a href="#">注目コンビの舞台裏</a><p>★ 1310　10:11</p></div></li>
+              <li><span class="rank-badge">3</span><div class="category-item"><a href="#">単独ライブ速報レポート</a><p>★ 990　9:01</p></div></li>
+              <li><span class="rank-badge">4</span><div class="category-item"><a href="#">若手芸人インタビュー</a><p>★ 744　8:33</p></div></li>
+              <li><span class="rank-badge">5</span><div class="category-item"><a href="#">編集部の推しネタ集</a><p>★ 612　7:42</p></div></li>
+            </ol>
+            <a class="more-btn" href="#">もっと見る</a>
+          </section>
+          <section class="sidebox category-box movie-box">
+            <h3>映画 - 記事アクセスランキング</h3>
+            <ol class="category-list">
+              <li><span class="rank-badge">1</span><div class="category-item"><a href="#">新作映画の先行レビュー</a><p>★ 2103　12:10</p></div></li>
+              <li><span class="rank-badge">2</span><div class="category-item"><a href="#">監督インタビュー前編</a><p>★ 1540　11:22</p></div></li>
+              <li><span class="rank-badge">3</span><div class="category-item"><a href="#">話題作の注目ポイント</a><p>★ 1211　10:09</p></div></li>
+              <li><span class="rank-badge">4</span><div class="category-item"><a href="#">上映館情報まとめ</a><p>★ 803　9:14</p></div></li>
+              <li><span class="rank-badge">5</span><div class="category-item"><a href="#">読者投票ランキング</a><p>★ 699　8:55</p></div></li>
+            </ol>
+            <a class="more-btn" href="#">もっと見る</a>
+          </section>
+          <section class="sidebox category-box stage-box">
+            <h3>ステージ - 記事アクセスランキング</h3>
+            <ol class="category-list">
+              <li><span class="rank-badge">1</span><div class="category-item"><a href="#">舞台新作の見どころ紹介</a><p>★ 1401　9:40</p></div></li>
+              <li><span class="rank-badge">2</span><div class="category-item"><a href="#">出演者コメントまとめ</a><p>★ 1109　8:20</p></div></li>
+              <li><span class="rank-badge">3</span><div class="category-item"><a href="#">公演日程一覧</a><p>★ 1002　7:10</p></div></li>
+              <li><span class="rank-badge">4</span><div class="category-item"><a href="#">注目シーンを解説</a><p>★ 785　6:32</p></div></li>
+              <li><span class="rank-badge">5</span><div class="category-item"><a href="#">編集部レビュー</a><p>★ 640　5:54</p></div></li>
+            </ol>
+            <a class="more-btn" href="#">もっと見る</a>
           </section>
         </aside>
       </div>
@@ -93,5 +184,54 @@
         <a href="#">お問い合わせ</a>
       </div>
     </footer>
+
+    <script type="module">
+      const posts = [
+        { title: "新作アルバムレビュー", tag: "音楽", views: 9200 },
+        { title: "ライブ配信の見どころ", tag: "音楽", views: 12100 },
+        { title: "話題作の作者インタビュー", tag: "コミック", views: 7800 },
+        { title: "春アニメ原作ガイド", tag: "コミック", views: 10500 },
+        { title: "単独ライブ密着レポート", tag: "お笑い", views: 8400 },
+        { title: "注目芸人の新番組", tag: "お笑い", views: 11100 },
+        { title: "新作映画の先行レビュー", tag: "映画", views: 9800 },
+        { title: "舞台版の見どころまとめ", tag: "ステージ", views: 8900 }
+      ];
+
+      const topByTag = Object.values(
+        posts.reduce((acc, post) => {
+          if (!acc[post.tag] || acc[post.tag].views < post.views) {
+            acc[post.tag] = post;
+          }
+          return acc;
+        }, {})
+      );
+
+      const order = ["音楽", "コミック", "お笑い", "映画", "ステージ"];
+      const themes = {
+        音楽: { title: "音楽カテゴリー", className: "theme-music" },
+        コミック: { title: "コミックカテゴリー", className: "theme-comic" },
+        お笑い: { title: "お笑いカテゴリー", className: "theme-comedy" },
+        映画: { title: "映画カテゴリー", className: "theme-movie" },
+        ステージ: { title: "ステージカテゴリー", className: "theme-stage" }
+      };
+
+      const sorted = order
+        .map((tag) => topByTag.find((p) => p.tag === tag))
+        .filter(Boolean);
+
+      const el = document.getElementById("editorial-list");
+      el.innerHTML = sorted
+        .map(
+          (p) => `
+          <article class="editorial-card ${themes[p.tag].className}">
+            <p class="editorial-head">${themes[p.tag].title}</p>
+            <div class="editorial-thumb"></div>
+            <a href="#" class="editorial-title">${p.title}</a>
+            <p class="editorial-meta">閲覧 ${p.views.toLocaleString()} 回</p>
+          </article>
+        `
+        )
+        .join("");
+    </script>
   </body>
 </html>
