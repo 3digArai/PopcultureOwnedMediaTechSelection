@@ -4,3 +4,8 @@ nextjs_headless_test/.git/
 
 # Ignore hands-on notes for now
 document/handsonnote/
+
+# Local runtime artifacts
+custom_cms_test/node_modules/
+custom_cms_test/cookie.txt
+custom_cms_test/.env
